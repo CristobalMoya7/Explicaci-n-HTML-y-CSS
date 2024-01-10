@@ -1,0 +1,18 @@
+
+.footer {
+    padding-top: 20px; /* Padding es para crear un espaciado */
+    margin-top: 20px; /* Marging deja un espacio en blanco */
+    /* Arriba, derecha, abajo, izquierda */
+    padding: 20px 30px 20px 30px; /* Otra forma de poner padding, para el marging seria igual */
+    /* Arriba - abajo / Izquierda - derecha */
+    padding: 20px 30px;
+    /* Todo igual:
+    padding: 20px */
+    padding: 1.25rem 0;
+    text-align: center;
+    font-style: italic;
+    /*
+    Para font size se usa la unidad relativa de rem / em, equivale a los pixeles que hay predeterminados en el elemento root
+    */
+    font-size: 1rem;
+}

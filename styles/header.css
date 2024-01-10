@@ -1,0 +1,54 @@
+
+.header {
+    position: fixed; /* Posicion fija */
+    background-color: var(--bg-color); /* bg-color esta en el root */
+    z-index: 10; /* Para que quede por encima de la otra imagen, se pone un numero alto */
+    /*
+    left: 0; Rellenar de izquierda a derecha 
+    right: 0;
+    */
+    position: sticky; /* Que se quede fijo el contenido */
+    top: 0;
+    display: flex; /* Barra navegacion ajustada uno al lado de otro */
+    padding: 0.8rem;
+    justify-content: space-between;
+}
+
+.header .header__image { /* Define el ancho */
+    width: 150px;
+    max-width: 150px;
+
+}
+
+.header .header__image img { /* Dice el tamaño  de la imagen y coge el ancho de arriba */
+    width: 100%;
+}
+
+.header .header__nav .header__nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* Separar botones */
+}
+
+.header .header__nav .header__nav__list .header__nav__list_item a {
+    text-decoration: none;
+}
+
+.btn {
+    color: var(--main-text-color); /* Color texto del root */
+    background-color: var(--main-brand-color); /* Color de fondo */
+    padding: 0.8px;
+    display: inline-block;
+    border: 2px solid white; /* Poner bordes de otro color */
+    border-radius: 5px; /* Redondear bordes */
+    
+}
+
+.hidden {
+    display: none; /* Esta clase sirve para ocultar cualquier cosa que le pongamos como class hiden */
+    /* visibility: hidden; */
+    /* La diferencia entre display y visibility es que display no se va a ver nada de nada
+    mientras que visibility se va a ver el hueco vacio */
+}

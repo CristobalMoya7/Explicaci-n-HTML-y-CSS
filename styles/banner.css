@@ -1,0 +1,52 @@
+
+.banner {
+    /* La unidad de medida vh es relativa a la altura del navegador en el que estoy, es decir, si ponemos 100% ocupa el 100% de lo que estoy viendo */ 
+    height: 75vh; /* Ajustamos la medida de la imagen */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinear menu con imagen que no quede uno mas arriba de otro */
+}
+
+.banner__content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.banner__image {
+    position: absolute; /* Esto es absoluto al primer elemento que encuentre por encima y tenga posicion relativa, por eso ponemos en el banner posicion relativa */
+    opacity: 0.3; /* Dar opacidad */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../assets/app/catalog.jpg"); /* Los puntos son para ir hacia atras en las carpteras */
+    background-size: 450px; /* La hacemos mas pequeña y como en este caso si queremos que se repita no ponemos el comando de abajo.
+    /*
+    background-repeat: no-repeat; Para que la imagen no se repita hacia el lado
+    background-size: cover; Para que la imagen no se quede cortado al poner que no se repita y lo ocupe todo
+    */
+}
+
+/* 
+.banner__content h1 { Quitamos espacio superior en todos los h1, h2 y p
+    margin-top: 0;
+}
+
+.banner__content h2 {
+    margin-top: 0;
+}
+
+.banner__content p {
+    margin-top: 0;
+}
+*/
+
+/* Forma correcta */
+
+div.banner__content h1,
+div.banner__content h2,
+div.banner__content p {
+    margin-top: 0;
+}

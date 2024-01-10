@@ -1,0 +1,27 @@
+ /* Comentarios CSS 
+Selectores. Tenemos 3 tipos: 
+TAG. Este cambiar todos los H1
+h1 {
+    color : red;
+}
+  
+Class. Aqui ponemos el nombre de la clase que le hemos puesto. Siempre tienen prioridad los selectores de clase sobre los de tag
+.blue-color {
+    color: blue;
+}
+  
+Identificadores (id). La diferencia principal con la class es que tiene mas prioridad. No se suelen usar para definir estilos ya que el id es algo UNICO
+#green-color {
+    color: green;
+}
+  
+Si ponemos !important en un selector siempre va a ganar a todo
+  
+h1 {
+    color : blueviolet !important
+}
+
+    
+El mas importante es el *{}, este los pisa a todos. Esto se usaria en algun caso especifico como poner un tipo de fuente o algo similar
+*/
+  
