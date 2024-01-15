@@ -6,9 +6,11 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/components.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/banner.css">
   <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/info.css">
 </head>
 <body class="main-bg">
   <!--
@@ -45,7 +47,7 @@
     </div>
     <nav class="header__nav">
        <ul class="header__nav__list">
-        <li class="header__nav__list__item">
+        <li class="header__nav__list__item hidden">
           <a class="btn" href="">All shows</a>
         </li>
         <li class="header__nav__list__item">
@@ -62,6 +64,18 @@
       <h2>Watch anywhere. Cancel time</h2>
       <p>Ready to watch? Enter your email to create or restar your membership</p>
     </div>
+    </section>
+    <section class="info">
+      <div class="info__text">
+        <h2>Watch everywhere</h2>
+        <p>Stream unlimited movies and TV shows en your, phone, tablet, laptop and TV.</p>
+      </div>
+      <div class="info__video">
+        <img src="assets/app/device-pile.png" alt="device content"> <!-- El alt seria el texto que sale si la imagen esta mal o no se ve-->
+        <video src="assets/app/video-devices.m4v" muted autoplay loop> <!-- El video no se autoreproduce solo, añadimos los controles con controls y si queremos que se reproduzca todo el rato ponemos el autoplay. Si el video tiene audio el navegador a veces no nos va a dejar ponerlo. Para esto ponemos muted. Ponemos loop para que se quede en bucle-->
+          <source src="assets/app/video-devices.m4v" type="video/mp4"> <!-- Añadimos el video en varias resoluciones por si el navergador no soporta la resolucion de uno escoge otro. Podemos poner tantos comom queramos-->
+        </video> 
+      </div>
     </section>
   </main>
   <footer class="footer">

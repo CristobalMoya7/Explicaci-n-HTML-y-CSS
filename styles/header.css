@@ -12,6 +12,7 @@
     display: flex; /* Barra navegacion ajustada uno al lado de otro */
     padding: 0.8rem;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header .header__image { /* Define el ancho */
@@ -36,19 +37,9 @@
     text-decoration: none;
 }
 
-.btn {
-    color: var(--main-text-color); /* Color texto del root */
-    background-color: var(--main-brand-color); /* Color de fondo */
-    padding: 0.8px;
-    display: inline-block;
-    border: 2px solid white; /* Poner bordes de otro color */
-    border-radius: 5px; /* Redondear bordes */
-    
-}
-
-.hidden {
-    display: none; /* Esta clase sirve para ocultar cualquier cosa que le pongamos como class hiden */
-    /* visibility: hidden; */
-    /* La diferencia entre display y visibility es que display no se va a ver nada de nada
-    mientras que visibility se va a ver el hueco vacio */
+/* El 768px son breackpoints, hay varios y los puedes encontrar en internet */
+@media (width > 768px) { /* Mostrar sing up y login cuando llega a un cierto tamaño la pantalla width mayores a 768px*/
+    .header__nav .header__nav__list .header__nav__list__item.hidden { /* El .hidden se pone junto por que esta dentro del header_nav_list_item */
+        display: block;
+    }
 }

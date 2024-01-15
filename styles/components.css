@@ -1,0 +1,16 @@
+.btn {
+    color: var(--main-text-color); /* Color texto del root */
+    background-color: var(--main-brand-color); /* Color de fondo */
+    padding: 0.8rem;
+    display: inline-block;
+    /* border: 2px solid white; Poner bordes de otro color */
+    border-radius: 5px; /* Redondear bordes */
+    
+}
+
+.hidden {
+    display: none; /* Esta clase sirve para ocultar cualquier cosa que le pongamos como class hiden */
+    /* visibility: hidden; */
+    /* La diferencia entre display y visibility es que display no se va a ver nada de nada
+    mientras que visibility se va a ver el hueco vacio */
+}
