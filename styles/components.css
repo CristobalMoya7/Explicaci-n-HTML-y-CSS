@@ -5,7 +5,8 @@
     display: inline-block;
     /* border: 2px solid white; Poner bordes de otro color */
     border-radius: 5px; /* Redondear bordes */
-    
+    border: none; /* Quitar bordes. El border radius que son las curbas aunque pongamos esto sigue funcioanando */
+    box-shadow: none; /* Quitar sombras */
 }
 
 .hidden {

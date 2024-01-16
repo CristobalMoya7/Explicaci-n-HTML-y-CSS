@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Codeflix</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/sign-up.css">
+</head>
+<body class="main-bg bg-image">
+    <div class="card">
+        <h1>Sign up</h1>
+        <!-- Form -->
+        <!-- El metodo get envia la info a traves de la URL. Esto no es muy bueno ya que se queda en la url y en el historial de busqueda. Es mejor usar el metodo POST para informacion sensible
+        Pero no siempre hay que usar POST. Por ejemplo, AIRBNB para el buscador usaria GET. Si el buscador de AIRBNB estuviese en POST nunca podria compartir esa busqueda con nadie -->
+        <form method="post" action=""> <!-- En action ponemos donde queremos que vaya la info del post -->
+            <div class="form__element"> <!-- Lo ponemos cada uno en un div para que quede uno debajo del otro ya que el div crea bloques -->
+            <label class="form__label" for="mail">Email</label> <!-- Ponemos un label para definir el tipo de input. El for busca un input con esa etiqueta para relacionarlos. Asi se pinchamos en la palabra Email nos dejaria escribir directamente -->
+            <input class="form__input" name="email" id="mail" type="email" value="@gmail.com" placeholder="Add Email"> <!-- Ponemos un input para que la persona pueda meter datos. El id es para conectarlo con el label. Asi se pinchamos en la palabra Email nos dejaria escribir directamente. Tenemos que poner un type que corresponda -->
+            </div> <!-- El name sirve para guardar la info del formulario. Es MUY IMPORTANTE ponerlo en todos los form-->
+            
+            <div class="form__element">
+            <label class="form__label" for="password">Password</label>
+            <input class="form__input" name="psw" type="password" id="password" placeholder="Add password" required> <!-- Placeholder es para poner una frase que se borra cuando escribimos-->
+            </div>
+
+            <div class="form__element">
+                <label class="form__label" for="phone">Enter your phone number</label>
+                <input class="form__input" type="tel" id="phone" name="phone" required placeholder="111-111-111" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" title="111-111-111"> <!-- Pattern es otro tipo de validacion, en este caso decimos que el numero tiene que tener 9 numeros y tiene que escrbirse 111-111-1111-->
+            </div>
+
+            <div class="form__element">
+                <label class="form__label" for="avatar">Choose your profile picture</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png" multiple> <!-- Con accept podemos poner que tipo de archivo aceptamos y multiple sirve para poder subir varios archivos-->
+            </div>
+            
+            <fieldset class="form__element"> <!-- Para agrupar una serie de campos -->
+                <legend>Fav category</legend>
+                <div>
+                    <label for="drama">Drama</label>
+                    <input type="radio" id="drama" name="favCategory" value="drama" checked> <!-- Les pongo el mismo nombre para no poder seleccionar los dos. Checked sirve para que uno este siempre marcado -->
+                    <label for="docu">Docus</label>
+                    <input type="radio" id="docu" name="favCategory" value="docu"> <!-- Les ponemos el valor para poder ver en network el valor que hemos seleccionado y hemos mandado en submit -->
+                </div>
+            </fieldset>
+
+            <div class="form__element">
+                <label class="form__label" for="bio">User bio</label>
+                <textarea class="form__input" name="bio" id="bio" cols="30" rows="10" placeholder="Add bio" required>Default value</textarea> <!-- Esto sirve para poder poner un texto mas largo, con saltos de linea...-->
+            </div>
+
+            <div class="form__element">
+                <label class="form__label" for="newsletter">Subscribe to all news</label>
+                <input type="checkbox" name="newsletter" id="newsletter" value="selected">
+            </div>
+
+            <div class="form__element">
+                <label class="form__label" for="country">Country</label>
+                <select class="form__input" name="country" id="country"> <!-- Select seria un desplegable. El value va a ser lo que nos va a enviar a nosotros al darle a submit -->
+                    <option value="es">España</option>
+                    <option value="co">Colombia</option>
+                </select>
+            </div>
+            <!-- <button type="button">Mostrar mas campos</button> Con el type button se usaria como un boton no como un submit, no se recargara la pagina -->
+            <div class="form__element">
+                <input class="btn" type="reset" value="Reset fields"> <!-- Reseteamos todos los campos del formulario -->
+                <input class="btn" type="submit" value="Submit"> <!-- Este boton seria para enviar info del formulario -->
+            </div>
+        </form>
+    </div>
+</body>
+</html>

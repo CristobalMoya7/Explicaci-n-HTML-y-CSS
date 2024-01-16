@@ -1,0 +1,30 @@
+.bg-image {
+    background-image: url("../assets/app/catalog.jpg");
+    background-size: 250px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.9); /* Cuando pongamos transparencias es mejor poner rgba */
+    padding: 40px 20px 50px 20px;
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+.form__element {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form__label {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.form__input {
+    border-radius: 5px;
+    padding: 16px 12px;
+    border: none;
+    background-color: #333;   
+    color: var(--main-text-color);
+}
