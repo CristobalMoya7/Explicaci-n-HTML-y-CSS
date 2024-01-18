@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0; /* Para quiar los bordes */
+            display: grid;
+            /*grid-template-columns: 200px 1fr 20%; El fr es la resta del tamaño de la derecha y de la izquierda para que se calcule automaticamente el tamaño */
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-template-rows: 80px 200px 500px 80px; /* Filas */
+            /* grid-template-columns: repeat(3, 1fr); Si por ejemplo queremos que todas las columnas sean iguales en vez de poner 1fr 1fr 1fr ponemos repeat(3veces, 1fr) o podriamos poner 200px repetar(2, 1fr) */
+            grid-template-areas: /* Esto es lo mismo que todo lo otro pero mucho mas rapido. Basicamente dibujamos en areas como lo queremos */
+            "header header header" 
+            "section section section"
+            "aside main main"
+            "footer footer footer";
+        }
+        header {
+            background-color: orange;
+            grid-area: header;
+            /*
+            grid-column-start: 1; Columna en la que empieza 
+            grid-column-end: 4; Columna en la que termina 
+            grid-row-start: 1; Fila en la que empieza 
+            grid-row-end: 2; Fila en la que termina 
+            Esto para que sea mas correcto se pone asi:
+            grid-column: 1 / 3;
+            grid-row: 1 / 2; */
+        }
+        section {
+            background-color: blue;
+            grid-area: section;
+            /*
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            */
+        }
+        aside {
+            background-color: blueviolet;
+            grid-area: aside;
+            /*
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            */
+        }
+        main {
+            background-color: yellow;
+            grid-area: main;
+            /*
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            */
+        }
+        footer  {
+            background-color: green;
+            grid-area: footer;
+            /*
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
+            */
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <section>Section</section>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+</html>
