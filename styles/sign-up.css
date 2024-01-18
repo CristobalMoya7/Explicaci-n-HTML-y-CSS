@@ -28,3 +28,23 @@
     background-color: #333;   
     color: var(--main-text-color);
 }
+
+.form__element.form__element--checkbox { /* Ajustamos el ckeck del newsleter */
+    flex-direction: row;
+    align-items: center;
+    /* gap: 10px Para separar el check y la palabra, pero vamos a usar otro como ejemplo */
+}
+
+.form__element.form__element--checkbox .form__label { /* Le quitamos el margen para que el check y la palabra quede cuadradas ya que son diferentes caudrados */
+    margin: 0;
+}
+
+.form__element.form__element--checkbox input[type="checkbox"] { /* Esto solo va a afectar a los input que tenga el tipo checkbox */
+    margin: 10px; /* Para darle el espacio */
+}
+
+.form__element__radio__list { /* Para centrar las categorias */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -7,6 +7,13 @@
     border-radius: 5px; /* Redondear bordes */
     border: none; /* Quitar bordes. El border radius que son las curbas aunque pongamos esto sigue funcioanando */
     box-shadow: none; /* Quitar sombras */
+    cursor: pointer; /* Para que al pasar por encima del boton aparezca el dedo */
+    border: 1px solid var(--main-brand-color); /* Ponemos esto para que se queden a la misma altura ya que le estamos poniendo borde */
+}
+
+.btn.btn--secondary { /* Clase para el boton reset secundario en la pagina sing up. El .btn es para que arrastre lo de arriba */
+    background-color: transparent;
+    border: 1px solid var(--main-text-color)
 }
 
 .hidden {

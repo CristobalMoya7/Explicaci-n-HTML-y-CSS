@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/sign-up.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/8d02c6f9d4.js" crossorigin="anonymous"></script>
 </head>
 <body class="main-bg bg-image">
     <div class="card">
         <h1>Sign up</h1>
+        <span class="material-symbols-outlined" translate="no"> <!-- Usamos el icono de setting, ponemos que no se traduzca por que si no da fallo-->
+            settings
+            </span>
+            <i class="fa-brands fa-youtube"></i>
         <!-- Form -->
         <!-- El metodo get envia la info a traves de la URL. Esto no es muy bueno ya que se queda en la url y en el historial de busqueda. Es mejor usar el metodo POST para informacion sensible
         Pero no siempre hay que usar POST. Por ejemplo, AIRBNB para el buscador usaria GET. Si el buscador de AIRBNB estuviese en POST nunca podria compartir esa busqueda con nadie -->
@@ -38,7 +44,7 @@
             
             <fieldset class="form__element"> <!-- Para agrupar una serie de campos -->
                 <legend>Fav category</legend>
-                <div>
+                <div class="form__element__radio__list">
                     <label for="drama">Drama</label>
                     <input type="radio" id="drama" name="favCategory" value="drama" checked> <!-- Les pongo el mismo nombre para no poder seleccionar los dos. Checked sirve para que uno este siempre marcado -->
                     <label for="docu">Docus</label>
@@ -51,7 +57,7 @@
                 <textarea class="form__input" name="bio" id="bio" cols="30" rows="10" placeholder="Add bio" required>Default value</textarea> <!-- Esto sirve para poder poner un texto mas largo, con saltos de linea...-->
             </div>
 
-            <div class="form__element">
+            <div class="form__element form__element--checkbox">
                 <label class="form__label" for="newsletter">Subscribe to all news</label>
                 <input type="checkbox" name="newsletter" id="newsletter" value="selected">
             </div>
@@ -64,8 +70,8 @@
                 </select>
             </div>
             <!-- <button type="button">Mostrar mas campos</button> Con el type button se usaria como un boton no como un submit, no se recargara la pagina -->
-            <div class="form__element">
-                <input class="btn" type="reset" value="Reset fields"> <!-- Reseteamos todos los campos del formulario -->
+            <div>
+                <input class="btn btn--secondary" type="reset" value="Reset fields"> <!-- Reseteamos todos los campos del formulario -->
                 <input class="btn" type="submit" value="Submit"> <!-- Este boton seria para enviar info del formulario -->
             </div>
         </form>
