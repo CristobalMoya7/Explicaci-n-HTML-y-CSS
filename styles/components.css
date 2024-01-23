@@ -9,6 +9,16 @@
     box-shadow: none; /* Quitar sombras */
     cursor: pointer; /* Para que al pasar por encima del boton aparezca el dedo */
     border: 1px solid var(--main-brand-color); /* Ponemos esto para que se queden a la misma altura ya que le estamos poniendo borde */
+    /* transition-property: background-color; / Esto es a lo que afecta
+    transition-duration: 2s; /* Tiempo de la transiccion */
+    transition: background-color 2s, color 10s; /* Normalmente lo vamos a encontrar asi y no como esta arriba */
+}
+
+@media (hover:hover) { /* Hover es cuando el raton pasa por encima de algo, en este caso un boton. Esto solo se va a ejecutar en pantallas que pueden hacer hover */
+    .btn:hover{
+        color: black;
+        background-color: yellow;
+    }
 }
 
 .btn.btn--secondary { /* Clase para el boton reset secundario en la pagina sing up. El .btn es para que arrastre lo de arriba */
