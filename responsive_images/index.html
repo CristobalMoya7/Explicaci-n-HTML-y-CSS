@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <picture> <!-- Para no tener que hacer un @media para cambiar de imagen segun la resolucion usamos picture y source. Ponemos el media dentro y cargamos la imagen -->
+        <source srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/fO7EJEn4hGVeN4UbBO3g.jpg" media="(width < 480px)"> <!-- Imagen pequeña -->
+        <source srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/qQ0QuF4k0kO8B72b8Vo8.jpg" media="(width < 768px)"> <!-- Imagen mediana -->
+        <img src="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/ZJ6ytgzvsh5CvWhdthsA.jpg"> <!-- Imagen grande por defecto -->
+    </picture>
+
+    <!-- srcset -->
+    <!-- La diferencia de esta forma a la de arriba es que abajo se van a ajustar automaticamente y arriba es a la resolucion que nosotros digamos y como nosotros digamos -->
+    <img 
+    src="Mediana.jpg"
+    srcset="Pequeña.jpg 591w, Mediana.jpg 1089w, Grande.jpg 1352w"> <!-- Ponemos todas las imagenes y al lado le ponemos el ancho de cada imagen para que se reescale segun el tamaño y los pixeles --> 
+</body>
+</html>

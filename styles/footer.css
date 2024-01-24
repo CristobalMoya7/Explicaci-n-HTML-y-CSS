@@ -15,4 +15,6 @@
     Para font size se usa la unidad relativa de rem / em, equivale a los pixeles que hay predeterminados en el elemento root
     */
     font-size: 1rem;
+    background: radial-gradient(circle, rgb(229,9,20,1) 0%, #0e1b4f 70%, #000413 100%); /* Ponemos la parte de abajo en ambos colores, Esto lo que hace es del color rojo al azul difuminar con los colores intermedios para que no se quede un salto de colores muy brusco */
+    /* box-shadow: ; Poner sobra, en este caso al footer */
 }

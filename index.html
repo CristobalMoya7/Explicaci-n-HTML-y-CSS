@@ -15,8 +15,88 @@
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/info.css">
   <link rel="stylesheet" href="styles/shows.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Estas 3 lineas son de una fuente -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    .element {
+      width: 80px;
+      height: 80px;
+      background-color: blue;
+      animation-name: random; /* Nombre animacion */
+      animation-duration: 10s; /* Duracion animacion */
+      /* animation-iteration-count: infinite; Se repite infinitamente */
+    }
+    @keyframes random { /* Animaciones */
+      0% {
+        width: 80px;
+        height: 80px;
+        opacity: 1;
+      }
+      20% {
+        width: 300px;
+        height: 80px;
+      }
+      60% {
+        width: 80px;
+        height: 200px;
+      }
+      100% {
+        width: 80px;
+        height: 80px;
+        background-color: blueviolet;
+        opacity: 0;
+      }
+    }
+
+    .spinner {
+      height: 50px;
+      width: 50px;
+      background-color: transparent;
+      border: 5px solid #FFF;
+      border-left-color: #e50914;
+      border-radius: 50px; /* Convertir el cuadrado en circulo */
+      animation: spinner 2s ease-in-out infinite;
+    }
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg); /* Para que gire. Se pone en grados con deg */
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .progress {
+      background-color: #e50914;
+      height: 10px;
+      width: 10px;
+      position: fixed;
+      z-index: 100;
+      animation: progress linear;
+      animation-timeline: scroll(); /* Esto hace que la linea avance cuando bajamos nosotros la pantalla */
+    }
+    @media (prefers-reduced-motion: no-preference) { /* Esto es para que si alguien no quiere la animacion o su navegador / dispositivo no lo soporta no se ejecute */
+      @supports (animation-timeline: scroll()) {
+        .progress {
+          animation-timeline: scroll();
+        }
+      }
+    }
+
+    @keyframes progress {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body class="main-bg">
+  <div class="progress"></div>
+  <div class="spinner"></div>
+  <!-- <div class="element"></div> EFECTO DE ARRIBA -->
   <!--
       <ol type="i">  Lista ordenada. Ambas tienen que tener dentro li que son elementos de la lista
         <li>JavaScript</li>

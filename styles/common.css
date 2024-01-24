@@ -2,7 +2,7 @@
     --bg-color: #000;
     --main-text-color: #fff;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif; /* Roboto es la fuente que he añadido en el index */
     --main-brand-color: #e50914
 }
 

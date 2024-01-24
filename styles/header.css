@@ -33,6 +33,10 @@
     gap: 10px; /* Separar botones */
 }
 
+/* Si ponemos .header .header__nav > .header__nav__list Esto afectaria a todo lo que este por debajo de header_nav y que tenga la clase header_nav_list */
+/* Si ponemos .header .header__nav + .header__nav__list Esto afectaria a todo lo que este al mismo nivel y debajo de header_nav en este caso */
+/* Si ponemos .header .header__nav ~ .header__nav__list Esto afectaria a todo lo que este al mismo nivel de header_nav y afecta anque haya cosas por medio */
+
 .header .header__nav .header__nav__list .header__nav__list_item a {
     text-decoration: none;
 }
@@ -42,4 +46,14 @@
     .header__nav .header__nav__list .header__nav__list__item.hidden { /* El .hidden se pone junto por que esta dentro del header_nav_list_item */
         display: block;
     }
+}
+
+.header__nav__list li { /* Posicion relativa para poner el icono dentro */
+    position: relative;
+}
+
+.header__nav__list li::before { /* Añadimos un icono en el menu */
+    content: "👽" ;
+    position: absolute;
+    left: 0;
 }
